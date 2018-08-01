@@ -7,21 +7,95 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4438FE3DD17DF7E0B0A7125B /* Pods_TinderProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E49550981BE01BA6E810045C /* Pods_TinderProject.framework */; };
+		840BCF28210237C300DAE8C6 /* SuperLikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BCF27210237C300DAE8C6 /* SuperLikesViewController.swift */; };
+		840BCF2A21023C0E00DAE8C6 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BCF2921023C0E00DAE8C6 /* DetailsViewController.swift */; };
+		842498B62100047F0089C163 /* DealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842498B52100047F0089C163 /* DealViewController.swift */; };
+		842498B8210011D10089C163 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 842498B7210011D10089C163 /* GoogleService-Info.plist */; };
+		842498BB210015720089C163 /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842498BA210015720089C163 /* DBProvider.swift */; };
+		842498BD210015CB0089C163 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842498BC210015CB0089C163 /* API.swift */; };
+		842498BF210016450089C163 /* AppCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842498BE210016450089C163 /* AppCommon.swift */; };
+		842498C22100166E0089C163 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842498C12100166E0089C163 /* User.swift */; };
+		842498C4210032C30089C163 /* HkgValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842498C3210032C30089C163 /* HkgValidators.swift */; };
+		842498C62100A7300089C163 /* SignupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842498C52100A7300089C163 /* SignupData.swift */; };
+		8446144E20F904C000124A3B /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446144D20F904C000124A3B /* Transitions.swift */; };
+		8446145020F9147E00124A3B /* HitBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446144F20F9147E00124A3B /* HitBoxButton.swift */; };
 		844DFBD420F084140016DE0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DFBD320F084140016DE0F /* AppDelegate.swift */; };
-		844DFBD620F084140016DE0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DFBD520F084140016DE0F /* ViewController.swift */; };
+		844DFBD620F084140016DE0F /* SignInRegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DFBD520F084140016DE0F /* SignInRegisterController.swift */; };
 		844DFBD920F084140016DE0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844DFBD720F084140016DE0F /* Main.storyboard */; };
 		844DFBDB20F084140016DE0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844DFBDA20F084140016DE0F /* Assets.xcassets */; };
 		844DFBDE20F084140016DE0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844DFBDC20F084140016DE0F /* LaunchScreen.storyboard */; };
+		844DFBED20F0866A0016DE0F /* ExtendCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DFBE620F086690016DE0F /* ExtendCore.swift */; };
+		844DFBEE20F0866A0016DE0F /* ButtonWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DFBE720F0866A0016DE0F /* ButtonWithImage.swift */; };
+		844DFBEF20F0866A0016DE0F /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DFBE820F0866A0016DE0F /* NSLayoutConstraintExtension.swift */; };
+		844DFBF020F0866A0016DE0F /* AppStatusNoty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DFBE920F0866A0016DE0F /* AppStatusNoty.swift */; };
+		844DFBF120F0866A0016DE0F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DFBEA20F0866A0016DE0F /* DateExtension.swift */; };
+		844DFBF220F0866A0016DE0F /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DFBEB20F0866A0016DE0F /* Validate.swift */; };
+		844DFBF320F0866A0016DE0F /* Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DFBEC20F0866A0016DE0F /* Shuffle.swift */; };
+		845EDCFC20F8923D00A461BB /* DealedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EDCFB20F8923D00A461BB /* DealedViewController.swift */; };
+		845EDCFE20F894AA00A461BB /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EDCFD20F894AA00A461BB /* InboxViewController.swift */; };
+		849B78BF2111BCB900F4AC0E /* Thing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B78BE2111BCB900F4AC0E /* Thing.swift */; };
+		849B78C22111C15D00F4AC0E /* MyThingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B78C12111C15D00F4AC0E /* MyThingCell.swift */; };
+		849B854F20F5DCF200436C87 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B854E20F5DCF200436C87 /* HomeViewController.swift */; };
+		849B855120F5E5E600436C87 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B855020F5E5E600436C87 /* ProfileViewController.swift */; };
+		849B855320F5F43A00436C87 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B855220F5F43A00436C87 /* SettingsViewController.swift */; };
+		84D149DA20F5525B0091D166 /* SignInWithViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D149D920F5525B0091D166 /* SignInWithViewController.swift */; };
+		84D149DC20F5527E0091D166 /* SignInWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D149DB20F5527E0091D166 /* SignInWithEmailViewController.swift */; };
+		84D149DE20F552AF0091D166 /* RegisterWithViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D149DD20F552AF0091D166 /* RegisterWithViewController.swift */; };
+		84D149E020F552D10091D166 /* RegisterWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D149DF20F552D10091D166 /* RegisterWithEmailViewController.swift */; };
+		84D77E7B20F6045100C5EF22 /* AddThingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D77E7A20F6045100C5EF22 /* AddThingViewController.swift */; };
+		84D77E7D20F6171B00C5EF22 /* CommonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D77E7C20F6171B00C5EF22 /* CommonAction.swift */; };
+		84DFF64920F2896F00B7A4E7 /* HowToPlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFF64820F2896F00B7A4E7 /* HowToPlayController.swift */; };
+		84ECBF9920F32ACD001A0E50 /* ThingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ECBF9820F32ACD001A0E50 /* ThingsViewController.swift */; };
+		84ECBF9B20F32B84001A0E50 /* SwiftyAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ECBF9A20F32B84001A0E50 /* SwiftyAvatar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17585849252CF30076DEBC2F /* Pods-TinderProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TinderProject/Pods-TinderProject.debug.xcconfig"; sourceTree = "<group>"; };
+		840BCF27210237C300DAE8C6 /* SuperLikesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperLikesViewController.swift; sourceTree = "<group>"; };
+		840BCF2921023C0E00DAE8C6 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		842498B52100047F0089C163 /* DealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealViewController.swift; sourceTree = "<group>"; };
+		842498B7210011D10089C163 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		842498BA210015720089C163 /* DBProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBProvider.swift; sourceTree = "<group>"; };
+		842498BC210015CB0089C163 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		842498BE210016450089C163 /* AppCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCommon.swift; sourceTree = "<group>"; };
+		842498C12100166E0089C163 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		842498C3210032C30089C163 /* HkgValidators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HkgValidators.swift; sourceTree = "<group>"; };
+		842498C52100A7300089C163 /* SignupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupData.swift; sourceTree = "<group>"; };
+		8446144D20F904C000124A3B /* Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
+		8446144F20F9147E00124A3B /* HitBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitBoxButton.swift; sourceTree = "<group>"; };
 		844DFBD020F084140016DE0F /* TinderProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844DFBD320F084140016DE0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		844DFBD520F084140016DE0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		844DFBD520F084140016DE0F /* SignInRegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRegisterController.swift; sourceTree = "<group>"; };
 		844DFBD820F084140016DE0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		844DFBDA20F084140016DE0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		844DFBDD20F084140016DE0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		844DFBDF20F084140016DE0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844DFBE620F086690016DE0F /* ExtendCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendCore.swift; sourceTree = "<group>"; };
+		844DFBE720F0866A0016DE0F /* ButtonWithImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonWithImage.swift; sourceTree = "<group>"; };
+		844DFBE820F0866A0016DE0F /* NSLayoutConstraintExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtension.swift; sourceTree = "<group>"; };
+		844DFBE920F0866A0016DE0F /* AppStatusNoty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStatusNoty.swift; sourceTree = "<group>"; };
+		844DFBEA20F0866A0016DE0F /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		844DFBEB20F0866A0016DE0F /* Validate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
+		844DFBEC20F0866A0016DE0F /* Shuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shuffle.swift; sourceTree = "<group>"; };
+		845EDCFB20F8923D00A461BB /* DealedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealedViewController.swift; sourceTree = "<group>"; };
+		845EDCFD20F894AA00A461BB /* InboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
+		849B78BE2111BCB900F4AC0E /* Thing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thing.swift; sourceTree = "<group>"; };
+		849B78C12111C15D00F4AC0E /* MyThingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyThingCell.swift; sourceTree = "<group>"; };
+		849B854E20F5DCF200436C87 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		849B855020F5E5E600436C87 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		849B855220F5F43A00436C87 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		84D149D920F5525B0091D166 /* SignInWithViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithViewController.swift; sourceTree = "<group>"; };
+		84D149DB20F5527E0091D166 /* SignInWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailViewController.swift; sourceTree = "<group>"; };
+		84D149DD20F552AF0091D166 /* RegisterWithViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWithViewController.swift; sourceTree = "<group>"; };
+		84D149DF20F552D10091D166 /* RegisterWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWithEmailViewController.swift; sourceTree = "<group>"; };
+		84D77E7A20F6045100C5EF22 /* AddThingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThingViewController.swift; sourceTree = "<group>"; };
+		84D77E7C20F6171B00C5EF22 /* CommonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAction.swift; sourceTree = "<group>"; };
+		84DFF64820F2896F00B7A4E7 /* HowToPlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayController.swift; sourceTree = "<group>"; };
+		84ECBF9820F32ACD001A0E50 /* ThingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsViewController.swift; sourceTree = "<group>"; };
+		84ECBF9A20F32B84001A0E50 /* SwiftyAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyAvatar.swift; sourceTree = "<group>"; };
+		DF56A47C21B50170144033D3 /* Pods-TinderProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TinderProject/Pods-TinderProject.release.xcconfig"; sourceTree = "<group>"; };
+		E49550981BE01BA6E810045C /* Pods_TinderProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinderProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +103,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4438FE3DD17DF7E0B0A7125B /* Pods_TinderProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		842498B92100155D0089C163 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				842498BA210015720089C163 /* DBProvider.swift */,
+				842498BC210015CB0089C163 /* API.swift */,
+				842498BE210016450089C163 /* AppCommon.swift */,
+			);
+			name = api;
+			sourceTree = "<group>";
+		};
+		842498C0210016650089C163 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				849B78BE2111BCB900F4AC0E /* Thing.swift */,
+				842498C12100166E0089C163 /* User.swift */,
+				842498C52100A7300089C163 /* SignupData.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
 		844DFBC720F084130016DE0F = {
 			isa = PBXGroup;
 			children = (
 				844DFBD220F084140016DE0F /* TinderProject */,
 				844DFBD120F084140016DE0F /* Products */,
+				F388E2B5C3B822D579D62BEE /* Pods */,
+				D47925ED68FBE71D8F4E85EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +151,78 @@
 		844DFBD220F084140016DE0F /* TinderProject */ = {
 			isa = PBXGroup;
 			children = (
+				849B78C02111C14F00F4AC0E /* cells */,
+				842498C0210016650089C163 /* models */,
+				842498B92100155D0089C163 /* api */,
+				844DFBE520F086310016DE0F /* extensions */,
+				842498B7210011D10089C163 /* GoogleService-Info.plist */,
 				844DFBD320F084140016DE0F /* AppDelegate.swift */,
-				844DFBD520F084140016DE0F /* ViewController.swift */,
 				844DFBD720F084140016DE0F /* Main.storyboard */,
 				844DFBDA20F084140016DE0F /* Assets.xcassets */,
 				844DFBDC20F084140016DE0F /* LaunchScreen.storyboard */,
 				844DFBDF20F084140016DE0F /* Info.plist */,
+				84DFF64820F2896F00B7A4E7 /* HowToPlayController.swift */,
+				84ECBF9820F32ACD001A0E50 /* ThingsViewController.swift */,
+				844DFBD520F084140016DE0F /* SignInRegisterController.swift */,
+				84D149D920F5525B0091D166 /* SignInWithViewController.swift */,
+				84D149DB20F5527E0091D166 /* SignInWithEmailViewController.swift */,
+				84D149DD20F552AF0091D166 /* RegisterWithViewController.swift */,
+				84D149DF20F552D10091D166 /* RegisterWithEmailViewController.swift */,
+				849B854E20F5DCF200436C87 /* HomeViewController.swift */,
+				849B855020F5E5E600436C87 /* ProfileViewController.swift */,
+				849B855220F5F43A00436C87 /* SettingsViewController.swift */,
+				84D77E7A20F6045100C5EF22 /* AddThingViewController.swift */,
+				84D77E7C20F6171B00C5EF22 /* CommonAction.swift */,
+				845EDCFB20F8923D00A461BB /* DealedViewController.swift */,
+				845EDCFD20F894AA00A461BB /* InboxViewController.swift */,
+				842498B52100047F0089C163 /* DealViewController.swift */,
+				840BCF27210237C300DAE8C6 /* SuperLikesViewController.swift */,
+				840BCF2921023C0E00DAE8C6 /* DetailsViewController.swift */,
 			);
 			path = TinderProject;
+			sourceTree = "<group>";
+		};
+		844DFBE520F086310016DE0F /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				844DFBE920F0866A0016DE0F /* AppStatusNoty.swift */,
+				844DFBE720F0866A0016DE0F /* ButtonWithImage.swift */,
+				844DFBEA20F0866A0016DE0F /* DateExtension.swift */,
+				844DFBE620F086690016DE0F /* ExtendCore.swift */,
+				844DFBE820F0866A0016DE0F /* NSLayoutConstraintExtension.swift */,
+				844DFBEC20F0866A0016DE0F /* Shuffle.swift */,
+				844DFBEB20F0866A0016DE0F /* Validate.swift */,
+				84ECBF9A20F32B84001A0E50 /* SwiftyAvatar.swift */,
+				8446144D20F904C000124A3B /* Transitions.swift */,
+				8446144F20F9147E00124A3B /* HitBoxButton.swift */,
+				842498C3210032C30089C163 /* HkgValidators.swift */,
+			);
+			name = extensions;
+			sourceTree = "<group>";
+		};
+		849B78C02111C14F00F4AC0E /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				849B78C12111C15D00F4AC0E /* MyThingCell.swift */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
+		D47925ED68FBE71D8F4E85EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E49550981BE01BA6E810045C /* Pods_TinderProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F388E2B5C3B822D579D62BEE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17585849252CF30076DEBC2F /* Pods-TinderProject.debug.xcconfig */,
+				DF56A47C21B50170144033D3 /* Pods-TinderProject.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +232,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 844DFBE220F084140016DE0F /* Build configuration list for PBXNativeTarget "TinderProject" */;
 			buildPhases = (
+				7E0D03148EB4F42754E36956 /* [CP] Check Pods Manifest.lock */,
 				844DFBCC20F084140016DE0F /* Sources */,
 				844DFBCD20F084140016DE0F /* Frameworks */,
 				844DFBCE20F084140016DE0F /* Resources */,
+				4F155D31E8BD8F0EF69FEB8C /* [CP] Embed Pods Frameworks */,
+				A97D45E09339C282ED0ECFB1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				844DFBDE20F084140016DE0F /* LaunchScreen.storyboard in Resources */,
+				842498B8210011D10089C163 /* GoogleService-Info.plist in Resources */,
 				844DFBDB20F084140016DE0F /* Assets.xcassets in Resources */,
 				844DFBD920F084140016DE0F /* Main.storyboard in Resources */,
 			);
@@ -131,13 +296,146 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4F155D31E8BD8F0EF69FEB8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TinderProject/Pods-TinderProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ALCameraViewController/ALCameraViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ALCameraViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TinderProject/Pods-TinderProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E0D03148EB4F42754E36956 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TinderProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A97D45E09339C282ED0ECFB1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TinderProject/Pods-TinderProject-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TinderProject/Pods-TinderProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		844DFBCC20F084140016DE0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844DFBD620F084140016DE0F /* ViewController.swift in Sources */,
+				84ECBF9920F32ACD001A0E50 /* ThingsViewController.swift in Sources */,
+				844DFBED20F0866A0016DE0F /* ExtendCore.swift in Sources */,
+				840BCF28210237C300DAE8C6 /* SuperLikesViewController.swift in Sources */,
+				844DFBF120F0866A0016DE0F /* DateExtension.swift in Sources */,
+				845EDCFE20F894AA00A461BB /* InboxViewController.swift in Sources */,
+				842498BF210016450089C163 /* AppCommon.swift in Sources */,
+				849B854F20F5DCF200436C87 /* HomeViewController.swift in Sources */,
+				844DFBD620F084140016DE0F /* SignInRegisterController.swift in Sources */,
+				842498BD210015CB0089C163 /* API.swift in Sources */,
+				840BCF2A21023C0E00DAE8C6 /* DetailsViewController.swift in Sources */,
+				842498C22100166E0089C163 /* User.swift in Sources */,
+				8446144E20F904C000124A3B /* Transitions.swift in Sources */,
+				849B855320F5F43A00436C87 /* SettingsViewController.swift in Sources */,
+				849B78BF2111BCB900F4AC0E /* Thing.swift in Sources */,
+				844DFBF220F0866A0016DE0F /* Validate.swift in Sources */,
+				849B855120F5E5E600436C87 /* ProfileViewController.swift in Sources */,
+				844DFBF320F0866A0016DE0F /* Shuffle.swift in Sources */,
+				845EDCFC20F8923D00A461BB /* DealedViewController.swift in Sources */,
+				84ECBF9B20F32B84001A0E50 /* SwiftyAvatar.swift in Sources */,
+				84D77E7D20F6171B00C5EF22 /* CommonAction.swift in Sources */,
 				844DFBD420F084140016DE0F /* AppDelegate.swift in Sources */,
+				84D149E020F552D10091D166 /* RegisterWithEmailViewController.swift in Sources */,
+				844DFBF020F0866A0016DE0F /* AppStatusNoty.swift in Sources */,
+				84D149DA20F5525B0091D166 /* SignInWithViewController.swift in Sources */,
+				849B78C22111C15D00F4AC0E /* MyThingCell.swift in Sources */,
+				842498B62100047F0089C163 /* DealViewController.swift in Sources */,
+				842498C4210032C30089C163 /* HkgValidators.swift in Sources */,
+				842498BB210015720089C163 /* DBProvider.swift in Sources */,
+				84DFF64920F2896F00B7A4E7 /* HowToPlayController.swift in Sources */,
+				844DFBEE20F0866A0016DE0F /* ButtonWithImage.swift in Sources */,
+				8446145020F9147E00124A3B /* HitBoxButton.swift in Sources */,
+				842498C62100A7300089C163 /* SignupData.swift in Sources */,
+				84D149DE20F552AF0091D166 /* RegisterWithViewController.swift in Sources */,
+				84D77E7B20F6045100C5EF22 /* AddThingViewController.swift in Sources */,
+				844DFBEF20F0866A0016DE0F /* NSLayoutConstraintExtension.swift in Sources */,
+				84D149DC20F5527E0091D166 /* SignInWithEmailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,13 +570,14 @@
 		};
 		844DFBE320F084140016DE0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17585849252CF30076DEBC2F /* Pods-TinderProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NFLEP29TZR;
+				DEVELOPMENT_TEAM = 572G6X78NN;
 				INFOPLIST_FILE = TinderProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hkg328.tinder.TinderProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hkg328.tinder.swaptinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -287,13 +586,14 @@
 		};
 		844DFBE420F084140016DE0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF56A47C21B50170144033D3 /* Pods-TinderProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NFLEP29TZR;
+				DEVELOPMENT_TEAM = 572G6X78NN;
 				INFOPLIST_FILE = TinderProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hkg328.tinder.TinderProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hkg328.tinder.swaptinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

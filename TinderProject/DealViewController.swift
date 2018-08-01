@@ -9,11 +9,20 @@
 import UIKit
 
 class DealViewController: UIViewController {
+    
+    @IBOutlet weak var thingImageView: UIImageView!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        thingImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(gotoDetailPage)))
+    }
+    
+    @objc func gotoDetailPage() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "detailsVC") as! DetailsViewController
+        present(vc, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +30,18 @@ class DealViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func handleDeal(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "dealedVC") as! DealedViewController
+        present(vc, animated: true, completion: nil)
     }
-    */
-
+    
+    @IBAction func handleNoDeal(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func backAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
 }

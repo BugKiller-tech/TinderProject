@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+class SignupData {
+    public static var firstName: String? = "";
+    public static var lastName: String? = "";
+    
+    public static func initSignupData() {
+        firstName = "";
+        lastName = "";
+    }
+}

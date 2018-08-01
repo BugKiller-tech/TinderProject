@@ -21,15 +21,20 @@ class InboxViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func handleBackAction(_ sender: Any) {
+//        let transition = Transitions.getRightToLeftVCTransition()
+//        transition.type = kCATransitionReveal
+//        //        view.layer.add(transition, forKey: kCATransition)
+//        view.window!.layer.add(transition, forKey: kCATransition)
+//        self.dismiss(animated: false, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
-    */
+    
 
+    @IBAction func handleShowDealedVC(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "dealedVC") as! DealedViewController
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
 }

@@ -1,0 +1,6 @@
+framework module Pods_TinderProject {
+  umbrella header "Pods-TinderProject-umbrella.h"
+
+  export *
+  module * { export * }
+}

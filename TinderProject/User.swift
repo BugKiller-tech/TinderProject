@@ -9,9 +9,9 @@
 import Foundation
 
 
-struct AppUser {
+struct User {
     
-    static var currentUser = AppUser()
+    static var currentUser = User()
     
     var id: String?
     var firstName: String? = ""
@@ -20,4 +20,9 @@ struct AppUser {
 
     var notification: String? = ""
     var photoUri: String? = ""
+    
+    var minPrice: Float = 0
+    var maxPrice: Float = 100
+    var radius: Float = 30
+    var category: String = "Other"
 }

@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+
+class AppCommon {
+    static var categories: [String] = []
+}
