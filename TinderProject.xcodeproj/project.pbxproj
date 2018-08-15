@@ -45,6 +45,7 @@
 		84D149E020F552D10091D166 /* RegisterWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D149DF20F552D10091D166 /* RegisterWithEmailViewController.swift */; };
 		84D77E7B20F6045100C5EF22 /* AddThingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D77E7A20F6045100C5EF22 /* AddThingViewController.swift */; };
 		84D77E7D20F6171B00C5EF22 /* CommonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D77E7C20F6171B00C5EF22 /* CommonAction.swift */; };
+		84DA78732118E2CE00C07970 /* MatchedThingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA78722118E2CE00C07970 /* MatchedThingCell.swift */; };
 		84DFF64920F2896F00B7A4E7 /* HowToPlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFF64820F2896F00B7A4E7 /* HowToPlayController.swift */; };
 		84ECBF9920F32ACD001A0E50 /* ThingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ECBF9820F32ACD001A0E50 /* ThingsViewController.swift */; };
 		84ECBF9B20F32B84001A0E50 /* SwiftyAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ECBF9A20F32B84001A0E50 /* SwiftyAvatar.swift */; };
@@ -91,6 +92,7 @@
 		84D149DF20F552D10091D166 /* RegisterWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWithEmailViewController.swift; sourceTree = "<group>"; };
 		84D77E7A20F6045100C5EF22 /* AddThingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThingViewController.swift; sourceTree = "<group>"; };
 		84D77E7C20F6171B00C5EF22 /* CommonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAction.swift; sourceTree = "<group>"; };
+		84DA78722118E2CE00C07970 /* MatchedThingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedThingCell.swift; sourceTree = "<group>"; };
 		84DFF64820F2896F00B7A4E7 /* HowToPlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayController.swift; sourceTree = "<group>"; };
 		84ECBF9820F32ACD001A0E50 /* ThingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsViewController.swift; sourceTree = "<group>"; };
 		84ECBF9A20F32B84001A0E50 /* SwiftyAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyAvatar.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				849B78C12111C15D00F4AC0E /* MyThingCell.swift */,
+				84DA78722118E2CE00C07970 /* MatchedThingCell.swift */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				842498C4210032C30089C163 /* HkgValidators.swift in Sources */,
 				842498BB210015720089C163 /* DBProvider.swift in Sources */,
 				84DFF64920F2896F00B7A4E7 /* HowToPlayController.swift in Sources */,
+				84DA78732118E2CE00C07970 /* MatchedThingCell.swift in Sources */,
 				844DFBEE20F0866A0016DE0F /* ButtonWithImage.swift in Sources */,
 				8446145020F9147E00124A3B /* HitBoxButton.swift in Sources */,
 				842498C62100A7300089C163 /* SignupData.swift in Sources */,

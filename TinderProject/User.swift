@@ -25,4 +25,6 @@ struct User {
     var maxPrice: Float = 100
     var radius: Float = 30
     var category: String = "Other"
+    
+    var currentThing: String = "";
 }

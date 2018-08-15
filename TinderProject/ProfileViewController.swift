@@ -40,6 +40,7 @@ class ProfileViewController: UIViewController {
     }
     
     func initUIValues() {
+        
         userNameLabel.text = User.currentUser.firstName! + " " + User.currentUser.lastName!
         if let url = User.currentUser.photoUri {
             if url != "" {

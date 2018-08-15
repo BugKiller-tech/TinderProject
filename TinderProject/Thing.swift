@@ -23,11 +23,13 @@ class Thing {
         imageUrl2 = data["imageUrl1"] as? String
         imageUrl3 = data["imageUrl1"] as? String
         imageUrl4 = data["imageUrl1"] as? String
+        selled = data["selled"] as? Bool
         
         if (imageUrl1 != "") { images.append(imageUrl1!) }
         if (imageUrl2 != "") { images.append(imageUrl2!) }
         if (imageUrl3 != "") { images.append(imageUrl3!) }
         if (imageUrl4 != "") { images.append(imageUrl4!) }
+        
     }
     
     
@@ -42,4 +44,6 @@ class Thing {
     var imageUrl4: String?
     
     var images: [String] = []
+    
+    var selled: Bool? = false
 }

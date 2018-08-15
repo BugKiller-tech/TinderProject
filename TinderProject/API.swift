@@ -31,6 +31,9 @@ class API {
         if let category = dict["category"] as? String {
             if category != "" { user.category = category }
         }
+        if let currentThing = dict["currentThing"] as? String {
+            user.currentThing = currentThing
+        }
         
         
         return user
@@ -87,9 +90,37 @@ class API {
     }
     
     public static func getMyNotSelledThings(completion: @escaping(_ things: [Thing]) -> Void) {
-        DBProvider.shared.thingsRef.queryOrdered(byChild: "price").queryEqual(toValue: User.currentUser.id!, childKey: "ownerId").observeSingleEvent(of: .value) { (snapshot) in
-            var things = makeThingsArray(snapshot: snapshot)
-            completion(things)
+        if let id = User.currentUser.id {
+            
+            DBProvider.shared.thingsRef.queryOrdered(byChild: "ownerId").queryEqual(toValue: id).observeSingleEvent(of: .value) { (snapshot) in
+                var things = makeThingsArray(snapshot: snapshot)
+                var rltThings: [Thing] = []
+                for thing in things {
+                    if thing.selled == false {
+                        rltThings.append(thing)
+                    }
+                }
+                completion(rltThings)
+            }
+        } else {
+            completion([])
+        }
+    }
+    public static func getMatchedThingsToMeAvailable(completion: @escaping(_ things: [Thing]) -> Void) {
+        if let id = User.currentUser.id {
+            
+            DBProvider.shared.thingsRef.queryOrdered(byChild: "category").queryEqual(toValue: User.currentUser.category).observeSingleEvent(of: .value) { (snapshot) in
+                var things = makeThingsArray(snapshot: snapshot)
+                var rltThings: [Thing] = []
+                for thing in things {
+                    if thing.selled == false && thing.ownerId != User.currentUser.id {
+                        rltThings.append(thing)
+                    }
+                }
+                completion(rltThings)
+            }
+        } else {
+            completion([])
         }
     }
     

@@ -155,14 +155,26 @@ class AddThingViewController: UIViewController {
             "title": self.titleTF.text ?? "",
             "category": self.categoryLabel.text,
             "description": self.descriptionTV.text ?? "",
-            "price": self.priceTF.text ?? "",
+            "price": Double(self.priceTF.text!) ?? 0,
             "ownerId": User.currentUser.id,
             "imageUrl1": self.imageUrl1,
             "imageUrl2": self.imageUrl2,
             "imageUrl3": self.imageUrl3,
             "imageUrl4": self.imageUrl4,
+            "selled": false,
         ]) { (error, snapshot) in
-            self.view.makeToast(NSLocalizedString("Successfully registered!", comment: ""))
+            DispatchQueue.main.async {
+                self.view.makeToast(NSLocalizedString("Successfully registered!", comment: ""))
+                
+                if User.currentUser.currentThing == "" {
+                    DBProvider.shared.userRef.child(User.currentUser.id!).updateChildValues([
+                        "currentThing": snapshot.key
+                    ])
+                    User.currentUser.currentThing = snapshot.key
+                }
+                self.dismiss(animated: true, completion: nil)
+            }
+            
         }
     }
     
