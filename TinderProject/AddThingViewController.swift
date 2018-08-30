@@ -11,6 +11,8 @@ import DropDown
 import Firebase
 import Toaster
 import Toast_Swift
+import SwiftyJSON
+import Alamofire
 
 class AddThingViewController: UIViewController {
     
@@ -150,32 +152,74 @@ class AddThingViewController: UIViewController {
                 return;
             }
         }
-
-        DBProvider.shared.thingsRef.childByAutoId().setValue([
+        let params = [
             "title": self.titleTF.text ?? "",
             "category": self.categoryLabel.text,
             "description": self.descriptionTV.text ?? "",
             "price": Double(self.priceTF.text!) ?? 0,
-            "ownerId": User.currentUser.id,
+            "firebaseId": User.currentUser.id,
             "imageUrl1": self.imageUrl1,
             "imageUrl2": self.imageUrl2,
             "imageUrl3": self.imageUrl3,
             "imageUrl4": self.imageUrl4,
-            "selled": false,
-        ]) { (error, snapshot) in
-            DispatchQueue.main.async {
-                self.view.makeToast(NSLocalizedString("Successfully registered!", comment: ""))
-                
-                if User.currentUser.currentThing == "" {
-                    DBProvider.shared.userRef.child(User.currentUser.id!).updateChildValues([
-                        "currentThing": snapshot.key
-                    ])
-                    User.currentUser.currentThing = snapshot.key
+            ] as [String : Any]
+        AppStatusNoty.showLoading(show: true)
+        Alamofire.request(CUSTOM_API.REGISTER_THING, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil)
+            .validate()
+            .responseJSON { (response) in
+                AppStatusNoty.showLoading(show: false)
+                print("this is the response")
+                debugPrint(response)
+//                print(response.result)
+                switch response.result {
+                case .success(let data):
+                    let json = JSON(data)
+                    print(json)
+                    if User.currentUser.currentThing == "" {
+                        DBProvider.shared.userRef.child(User.currentUser.id!).updateChildValues([
+                            "currentThing": json["thing"]["_id"].stringValue
+                        ])
+                        User.currentUser.currentThing = json["ting"]["_id"].stringValue
+                    }
+                    DispatchQueue.main.async {
+                        self.view.makeToast(NSLocalizedString("Successfully registered!", comment: ""))
+                    }
+                    break;
+                case .failure(let error):
+                    debugPrint(error)
+                    let json = JSON(response.data!)
+                    DispatchQueue.main.async {
+                        self.view.makeToast(json["errors"].stringValue)
+                    }
+                    break;
                 }
-                self.dismiss(animated: true, completion: nil)
-            }
-            
         }
+
+//        DBProvider.shared.thingsRef.childByAutoId().setValue([
+//            "title": self.titleTF.text ?? "",
+//            "category": self.categoryLabel.text,
+//            "description": self.descriptionTV.text ?? "",
+//            "price": Double(self.priceTF.text!) ?? 0,
+//            "ownerId": User.currentUser.id,
+//            "imageUrl1": self.imageUrl1,
+//            "imageUrl2": self.imageUrl2,
+//            "imageUrl3": self.imageUrl3,
+//            "imageUrl4": self.imageUrl4,
+//            "selled": false,
+//        ]) { (error, snapshot) in
+//            DispatchQueue.main.async {
+//                self.view.makeToast(NSLocalizedString("Successfully registered!", comment: ""))
+//
+//                if User.currentUser.currentThing == "" {
+//                    DBProvider.shared.userRef.child(User.currentUser.id!).updateChildValues([
+//                        "currentThing": snapshot.key
+//                    ])
+//                    User.currentUser.currentThing = snapshot.key
+//                }
+//                self.dismiss(animated: true, completion: nil)
+//            }
+//
+//        }
     }
     
     

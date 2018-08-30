@@ -18,6 +18,7 @@
 		842498C22100166E0089C163 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842498C12100166E0089C163 /* User.swift */; };
 		842498C4210032C30089C163 /* HkgValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842498C3210032C30089C163 /* HkgValidators.swift */; };
 		842498C62100A7300089C163 /* SignupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842498C52100A7300089C163 /* SignupData.swift */; };
+		843F40BB2135BE3C00D075A1 /* CUSTOM_API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F40BA2135BE3C00D075A1 /* CUSTOM_API.swift */; };
 		8446144E20F904C000124A3B /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446144D20F904C000124A3B /* Transitions.swift */; };
 		8446145020F9147E00124A3B /* HitBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446144F20F9147E00124A3B /* HitBoxButton.swift */; };
 		844DFBD420F084140016DE0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DFBD320F084140016DE0F /* AppDelegate.swift */; };
@@ -63,6 +64,7 @@
 		842498C12100166E0089C163 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		842498C3210032C30089C163 /* HkgValidators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HkgValidators.swift; sourceTree = "<group>"; };
 		842498C52100A7300089C163 /* SignupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupData.swift; sourceTree = "<group>"; };
+		843F40BA2135BE3C00D075A1 /* CUSTOM_API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CUSTOM_API.swift; sourceTree = "<group>"; };
 		8446144D20F904C000124A3B /* Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
 		8446144F20F9147E00124A3B /* HitBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitBoxButton.swift; sourceTree = "<group>"; };
 		844DFBD020F084140016DE0F /* TinderProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 				842498BA210015720089C163 /* DBProvider.swift */,
 				842498BC210015CB0089C163 /* API.swift */,
 				842498BE210016450089C163 /* AppCommon.swift */,
+				843F40BA2135BE3C00D075A1 /* CUSTOM_API.swift */,
 			);
 			name = api;
 			sourceTree = "<group>";
@@ -306,8 +309,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TinderProject/Pods-TinderProject-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TinderProject/Pods-TinderProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ALCameraViewController/ALCameraViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
@@ -321,6 +325,7 @@
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
@@ -333,6 +338,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ALCameraViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
@@ -346,6 +352,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
@@ -357,7 +364,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TinderProject/Pods-TinderProject-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TinderProject/Pods-TinderProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7E0D03148EB4F42754E36956 /* [CP] Check Pods Manifest.lock */ = {
@@ -384,7 +391,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TinderProject/Pods-TinderProject-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TinderProject/Pods-TinderProject-resources.sh",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -393,7 +400,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TinderProject/Pods-TinderProject-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TinderProject/Pods-TinderProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -408,6 +415,7 @@
 				840BCF28210237C300DAE8C6 /* SuperLikesViewController.swift in Sources */,
 				844DFBF120F0866A0016DE0F /* DateExtension.swift in Sources */,
 				845EDCFE20F894AA00A461BB /* InboxViewController.swift in Sources */,
+				843F40BB2135BE3C00D075A1 /* CUSTOM_API.swift in Sources */,
 				842498BF210016450089C163 /* AppCommon.swift in Sources */,
 				849B854F20F5DCF200436C87 /* HomeViewController.swift in Sources */,
 				844DFBD620F084140016DE0F /* SignInRegisterController.swift in Sources */,

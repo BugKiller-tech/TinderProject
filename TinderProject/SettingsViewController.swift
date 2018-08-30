@@ -123,6 +123,7 @@ class SettingsViewController: UIViewController {
             return;
         }
         
+        
         AppStatusNoty.showLoading(show: true)
         DBProvider.shared.userRef.child(User.currentUser.id!).updateChildValues([
             "category": self.categoryLabel.text!,

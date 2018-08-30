@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import Toaster
 import SDWebImage
+import SwiftyJSON
+import Alamofire
 
 class ProfileViewController: UIViewController {
     
@@ -33,10 +35,22 @@ class ProfileViewController: UIViewController {
         super.viewDidAppear(true)
         initUIValues();
         
+//        API.getMyNotSelledThings { (things) in
+//            self.things = things
+//        }
         
-        API.getMyNotSelledThings { (things) in
+        getMyAvailableThigns()
+    }
+    
+    
+    func getMyAvailableThigns() {
+        AppStatusNoty.showLoading(show: true)
+        CUSTOM_API.getMyAvailableThings { (things) in
+            AppStatusNoty.showLoading(show: false)
             self.things = things
         }
+        
+        
     }
     
     func initUIValues() {

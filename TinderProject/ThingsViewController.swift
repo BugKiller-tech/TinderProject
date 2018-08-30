@@ -33,9 +33,9 @@ class ThingsViewController: UIViewController {
     }
     
     func fetchData() {
-        API.getMatchedThingsToMeAvailable { (things) in
-            self.things = things
-        }
+//        API.getMatchedThingsToMeAvailable { (things) in
+//            self.things = things
+//        }
 //        getMatchedThingsToMeAvailable
     }
 

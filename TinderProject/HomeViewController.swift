@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Alamofire
 
 class HomeViewController: UIViewController {
 
@@ -32,7 +33,23 @@ class HomeViewController: UIViewController {
     }
     func fetchCurrentUser() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
+        let params = [
+            "firebaseId": uid
+        ]
+        Alamofire.request(CUSTOM_API.REGISTER_USER, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil)
+            .responseJSON { (response) in
+                switch response.result {
+                case .success:
+                    print(response)
+                case .failure(let error):
+                    print(error)
+                }
+        }
+        
+        
+        AppStatusNoty.showLoading(show: true)
         API.getCurrentUser(key: uid) { (user) in
+            AppStatusNoty.showLoading(show: false)
             if let user1 = user {
                 User.currentUser = user1;
             }

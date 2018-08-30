@@ -27,6 +27,8 @@ pod 'SDWebImage', '~> 4.0'
 # pod 'TextFieldEffects'
 pod 'SCLAlertView'
 pod 'DropDown'
+pod 'Alamofire', '~> 4.7'
+pod 'SwiftyJSON'
 
 
 end

@@ -7,23 +7,42 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class Thing {
     
     init() {
         
     }
-    init(data: [String: AnyObject]) {
-        title = data["title"] as? String
-        category = data["category"] as? String
-        description = data["description"] as? String
-        price = data["price"] as? Double
-        ownerId = data["ownerId"] as? String
-        imageUrl1 = data["imageUrl1"] as? String
-        imageUrl2 = data["imageUrl1"] as? String
-        imageUrl3 = data["imageUrl1"] as? String
-        imageUrl4 = data["imageUrl1"] as? String
-        selled = data["selled"] as? Bool
+//    init(data: [String: AnyObject]) {  // firebase
+//        title = data["title"] as? String
+//        category = data["category"] as? String
+//        description = data["description"] as? String
+//        price = data["price"] as? Double
+//        ownerId = data["ownerId"] as? String
+//        imageUrl1 = data["imageUrl1"] as? String
+//        imageUrl2 = data["imageUrl1"] as? String
+//        imageUrl3 = data["imageUrl1"] as? String
+//        imageUrl4 = data["imageUrl1"] as? String
+//        selled = data["selled"] as? Bool
+//
+//        if (imageUrl1 != "") { images.append(imageUrl1!) }
+//        if (imageUrl2 != "") { images.append(imageUrl2!) }
+//        if (imageUrl3 != "") { images.append(imageUrl3!) }
+//        if (imageUrl4 != "") { images.append(imageUrl4!) }
+//
+//    }
+    init(data: JSON) { // custom api
+        title = data["title"].stringValue
+        category = data["category"].stringValue
+        description = data["description"].stringValue
+        price = data["price"].doubleValue
+        ownerId = data["ownerId"].stringValue
+        imageUrl1 = data["imageUrl1"].stringValue
+        imageUrl2 = data["imageUrl1"].stringValue
+        imageUrl3 = data["imageUrl1"].stringValue
+        imageUrl4 = data["imageUrl1"].stringValue
+        selled = data["selled"].boolValue
         
         if (imageUrl1 != "") { images.append(imageUrl1!) }
         if (imageUrl2 != "") { images.append(imageUrl2!) }
