@@ -14,6 +14,8 @@ import ALCameraViewController
 import ImagePicker
 import Toaster
 import SDWebImage
+import SwiftyJSON
+import Alamofire
 
 class SettingsViewController: UIViewController {
     
@@ -125,13 +127,19 @@ class SettingsViewController: UIViewController {
         
         
         AppStatusNoty.showLoading(show: true)
-        DBProvider.shared.userRef.child(User.currentUser.id!).updateChildValues([
+        let params = [
             "category": self.categoryLabel.text!,
             "radius": self.radiusSlider.value,
             "minPrice": self.minPriceTF.text!,
             "maxPrice": self.maxPriceTF.text!
-        ]) { (error, ref) in
-            
+            ] as [String : Any]
+        
+        CUSTOM_API.updateUserSettings(params: params) {
+            debugPrint("updating is succeed")
+        }
+        
+        
+        DBProvider.shared.userRef.child(User.currentUser.id!).updateChildValues(params) { (error, ref) in
             User.currentUser.category = self.categoryLabel.text!
             User.currentUser.radius = self.radiusSlider.value
             User.currentUser.minPrice = (self.minPriceTF.text! as NSString).floatValue

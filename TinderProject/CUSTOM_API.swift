@@ -54,5 +54,28 @@ class CUSTOM_API {
         }
     }
     
+    public static func updateUserSettings(params: [String: Any], completion: @escaping() -> Void) {
+        var params1: [String: Any] = params
+        params1["firebaseId"] = User.currentUser.id!
+        Alamofire.request(CUSTOM_API.UPDATE_SETTING, method: .post, parameters: params1, encoding: JSONEncoding.default, headers: nil)
+            .validate()
+            .responseJSON { (response) in
+                print("this is the response")
+                debugPrint(response)
+                //                print(response.result)
+                switch response.result {
+                case .success(let data):
+                    debugPrint(data)
+                    completion()
+                    break;
+                case .failure(let error):
+                    debugPrint(error)
+                    debugPrint(response.data)
+                    completion()
+                }
+        }
+    }
+    
+    
     
 }
