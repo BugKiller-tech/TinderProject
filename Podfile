@@ -29,6 +29,7 @@ pod 'SCLAlertView'
 pod 'DropDown'
 pod 'Alamofire', '~> 4.7'
 pod 'SwiftyJSON'
+pod 'APScheduledLocationManager'
 
 
 end

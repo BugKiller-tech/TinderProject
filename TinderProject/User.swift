@@ -27,4 +27,7 @@ struct User {
     var category: String = "Other"
     
     var currentThing: String = "";
+    
+    var _id: String? = "" // mongo id
+    var name: String? = "" // this is saved on mongo
 }

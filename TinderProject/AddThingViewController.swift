@@ -157,7 +157,7 @@ class AddThingViewController: UIViewController {
             "category": self.categoryLabel.text,
             "description": self.descriptionTV.text ?? "",
             "price": Double(self.priceTF.text!) ?? 0,
-            "firebaseId": User.currentUser.id,
+            "firebaseId": User.currentUser.id!,
             "imageUrl1": self.imageUrl1,
             "imageUrl2": self.imageUrl2,
             "imageUrl3": self.imageUrl3,
@@ -179,10 +179,11 @@ class AddThingViewController: UIViewController {
                         DBProvider.shared.userRef.child(User.currentUser.id!).updateChildValues([
                             "currentThing": json["thing"]["_id"].stringValue
                         ])
-                        User.currentUser.currentThing = json["ting"]["_id"].stringValue
+                        User.currentUser.currentThing = json["thing"]["_id"].stringValue
                     }
                     DispatchQueue.main.async {
                         self.view.makeToast(NSLocalizedString("Successfully registered!", comment: ""))
+                        self.dismiss(animated: true, completion: nil)
                     }
                     break;
                 case .failure(let error):

@@ -18,6 +18,7 @@
 		842498C22100166E0089C163 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842498C12100166E0089C163 /* User.swift */; };
 		842498C4210032C30089C163 /* HkgValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842498C3210032C30089C163 /* HkgValidators.swift */; };
 		842498C62100A7300089C163 /* SignupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842498C52100A7300089C163 /* SignupData.swift */; };
+		84261CF7213F278900342FB1 /* ThingDetailCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84261CF6213F278900342FB1 /* ThingDetailCollectionCell.swift */; };
 		843F40BB2135BE3C00D075A1 /* CUSTOM_API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F40BA2135BE3C00D075A1 /* CUSTOM_API.swift */; };
 		8446144E20F904C000124A3B /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446144D20F904C000124A3B /* Transitions.swift */; };
 		8446145020F9147E00124A3B /* HitBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446144F20F9147E00124A3B /* HitBoxButton.swift */; };
@@ -64,6 +65,8 @@
 		842498C12100166E0089C163 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		842498C3210032C30089C163 /* HkgValidators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HkgValidators.swift; sourceTree = "<group>"; };
 		842498C52100A7300089C163 /* SignupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupData.swift; sourceTree = "<group>"; };
+		84261CF5213EAA0D00342FB1 /* TinderProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TinderProject.entitlements; sourceTree = "<group>"; };
+		84261CF6213F278900342FB1 /* ThingDetailCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingDetailCollectionCell.swift; sourceTree = "<group>"; };
 		843F40BA2135BE3C00D075A1 /* CUSTOM_API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CUSTOM_API.swift; sourceTree = "<group>"; };
 		8446144D20F904C000124A3B /* Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
 		8446144F20F9147E00124A3B /* HitBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitBoxButton.swift; sourceTree = "<group>"; };
@@ -156,6 +159,7 @@
 		844DFBD220F084140016DE0F /* TinderProject */ = {
 			isa = PBXGroup;
 			children = (
+				84261CF5213EAA0D00342FB1 /* TinderProject.entitlements */,
 				849B78C02111C14F00F4AC0E /* cells */,
 				842498C0210016650089C163 /* models */,
 				842498B92100155D0089C163 /* api */,
@@ -210,6 +214,7 @@
 			children = (
 				849B78C12111C15D00F4AC0E /* MyThingCell.swift */,
 				84DA78722118E2CE00C07970 /* MatchedThingCell.swift */,
+				84261CF6213F278900342FB1 /* ThingDetailCollectionCell.swift */,
 			);
 			name = cells;
 			sourceTree = "<group>";
@@ -267,6 +272,14 @@
 					844DFBCF20F084140016DE0F = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -311,6 +324,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TinderProject/Pods-TinderProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ALCameraViewController/ALCameraViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/APScheduledLocationManager/APScheduledLocationManager.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
@@ -338,6 +352,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ALCameraViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APScheduledLocationManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
@@ -417,6 +432,7 @@
 				845EDCFE20F894AA00A461BB /* InboxViewController.swift in Sources */,
 				843F40BB2135BE3C00D075A1 /* CUSTOM_API.swift in Sources */,
 				842498BF210016450089C163 /* AppCommon.swift in Sources */,
+				84261CF7213F278900342FB1 /* ThingDetailCollectionCell.swift in Sources */,
 				849B854F20F5DCF200436C87 /* HomeViewController.swift in Sources */,
 				844DFBD620F084140016DE0F /* SignInRegisterController.swift in Sources */,
 				842498BD210015CB0089C163 /* API.swift in Sources */,
@@ -585,6 +601,7 @@
 			baseConfigurationReference = 17585849252CF30076DEBC2F /* Pods-TinderProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TinderProject/TinderProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 572G6X78NN;
 				INFOPLIST_FILE = TinderProject/Info.plist;
@@ -601,6 +618,7 @@
 			baseConfigurationReference = DF56A47C21B50170144033D3 /* Pods-TinderProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TinderProject/TinderProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 572G6X78NN;
 				INFOPLIST_FILE = TinderProject/Info.plist;

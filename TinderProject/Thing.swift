@@ -12,8 +12,9 @@ import SwiftyJSON
 class Thing {
     
     init() {
-        
+
     }
+    
 //    init(data: [String: AnyObject]) {  // firebase
 //        title = data["title"] as? String
 //        category = data["category"] as? String
@@ -37,17 +38,24 @@ class Thing {
         category = data["category"].stringValue
         description = data["description"].stringValue
         price = data["price"].doubleValue
-        ownerId = data["ownerId"].stringValue
         imageUrl1 = data["imageUrl1"].stringValue
-        imageUrl2 = data["imageUrl1"].stringValue
-        imageUrl3 = data["imageUrl1"].stringValue
-        imageUrl4 = data["imageUrl1"].stringValue
+        imageUrl2 = data["imageUrl2"].stringValue
+        imageUrl3 = data["imageUrl3"].stringValue
+        imageUrl4 = data["imageUrl4"].stringValue
         selled = data["selled"].boolValue
         
         if (imageUrl1 != "") { images.append(imageUrl1!) }
         if (imageUrl2 != "") { images.append(imageUrl2!) }
         if (imageUrl3 != "") { images.append(imageUrl3!) }
         if (imageUrl4 != "") { images.append(imageUrl4!) }
+        
+        owner = User()
+        do {
+            try owner?.name = data["user"]["name"].stringValue
+            try owner?._id = data["user"]["_id"].stringValue
+        } catch (_) {
+            
+        }
         
     }
     
@@ -57,6 +65,7 @@ class Thing {
     var description: String?
     var price: Double?
     var ownerId: String?
+    var owner: User?
     var imageUrl1: String?
     var imageUrl2: String?
     var imageUrl3: String?

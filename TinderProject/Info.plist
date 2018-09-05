@@ -2,11 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -55,10 +50,29 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>App needs camera get the your profile picture from camera</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Need to get location even app is background mode to find the proper users each other to swap the items.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Need to get location even app is background mode to find the proper users each other to swap the items.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Need to get location even app is background mode to find the proper users each other to swap the items.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Need to get location even app is background mode to find the proper users each other to swap the items.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>It&apos;s needed to access photo library to get the profile picture.</string>
+	<string>It's needed to access photo library to get the profile picture.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>location</string>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.7.1)
   - ALCameraViewController (3.0.3)
+  - APScheduledLocationManager (1.0.1)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -132,6 +133,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - ALCameraViewController
+  - APScheduledLocationManager
   - DropDown
   - FBSDKLoginKit
   - Firebase/Auth
@@ -153,6 +155,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - ALCameraViewController
+    - APScheduledLocationManager
     - Bolts
     - BoringSSL
     - DropDown
@@ -198,6 +201,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
   ALCameraViewController: 6398a9282057f709b87a1ecc52a83b48028ade64
+  APScheduledLocationManager: ec688cae8b606c6f7a5234189c3954eb9a6d3ace
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL: 32764dbaf5f5888cf51fbaa172a010126b41bcd4
   DropDown: 20499c7b2731b0d21609af924e47c7677a2be50d
@@ -231,6 +235,6 @@ SPEC CHECKSUMS:
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
   Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
 
-PODFILE CHECKSUM: 3295c4dd8d3bd52a8059cf1a38b9064941a0aa88
+PODFILE CHECKSUM: f716555f55151222fe70dabe01221ce23772f0ff
 
 COCOAPODS: 1.6.0.beta.1

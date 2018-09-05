@@ -1723,27 +1723,27 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2tC-0g-NEs" userLabel="info" customClass="EffectView" customModule="TinderProject" customModuleProvider="target">
                                 <rect key="frame" x="31" y="94.333333333333343" width="352" height="492.33333333333326"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chandler Bing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uV8-NK-2bu">
-                                        <rect key="frame" x="108.66666666666666" y="-0.66666666666665719" width="135" height="52.666666666666664"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uV8-NK-2bu">
+                                        <rect key="frame" x="129" y="-0.66666666666665719" width="94.666666666666686" height="52.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" red="0.19891053440000001" green="0.5515604019" blue="0.91010177140000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tshirt" translatesAutoresizingMaskIntoConstraints="NO" id="tfb-Sl-Loa">
+                                    <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="tfb-Sl-Loa">
                                         <rect key="frame" x="0.0" y="52.666666666666657" width="352" height="387.33333333333337"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="tfb-Sl-Loa" secondAttribute="height" multiplier="1:1.1" id="v70-4x-cpi"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puzz T-Shirt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eio-DC-zm3">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eio-DC-zm3">
                                         <rect key="frame" x="0.0" y="440.00000000000006" width="372" height="52.666666666666686"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" red="0.19891053438186646" green="0.55156040191650391" blue="0.91010177135467529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="V9n-YS-HHG">
-                                        <rect key="frame" x="83.666666666666671" y="16.333333333333343" width="20" height="20"/>
+                                        <rect key="frame" x="104" y="16.333333333333343" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="5yY-Qt-47k"/>
                                             <constraint firstAttribute="height" constant="20" id="W1f-ZL-RqX"/>
@@ -1851,6 +1851,8 @@
                     </view>
                     <connections>
                         <outlet property="thingImageView" destination="tfb-Sl-Loa" id="O2F-et-NBi"/>
+                        <outlet property="thingNameLabel" destination="eio-DC-zm3" id="vpG-pX-UdE"/>
+                        <outlet property="thingUserNameLabel" destination="uV8-NK-2bu" id="1rJ-Fx-iGa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jeR-7L-Hdt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2149,6 +2151,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jip-1m-omD">
+                                <rect key="frame" x="42" y="565.33333333333337" width="331.33333333333331" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="18p-5N-gfc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.63132500650000001" green="0.63140040639999995" blue="0.63129025699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdU-F4-IVV" userLabel="backButton" customClass="HitBoxButton" customModule="TinderProject" customModuleProvider="target">
                                 <rect key="frame" x="20" y="30" width="25" height="15"/>
                                 <constraints>
@@ -2160,15 +2171,6 @@
                                     <action selector="handleBackAction:" destination="JSJ-Cq-lVV" eventType="touchUpInside" id="7Hs-hG-Lsh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jip-1m-omD">
-                                <rect key="frame" x="42" y="565.33333333333337" width="331.33333333333331" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="18p-5N-gfc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.63132500650000001" green="0.63140040639999995" blue="0.63129025699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -3203,7 +3205,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="icp-Li-wpu">
-                                <rect key="frame" x="10" y="65" width="394" height="477"/>
+                                <rect key="frame" x="10" y="64.999999999999972" width="394" height="439.33333333333326"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2ax-Lp-o6Q">
                                     <size key="itemSize" width="314" height="396"/>
@@ -3212,14 +3214,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellId" id="w9S-mB-mPA">
-                                        <rect key="frame" x="0.0" y="40.666666666666664" width="314" height="396"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellId" id="w9S-mB-mPA" customClass="ThingDetailCollectionCell" customModule="TinderProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="21.666666666666668" width="314" height="396"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="314" height="396"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tshirt" translatesAutoresizingMaskIntoConstraints="NO" id="gJe-C1-Nc5">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="gJe-C1-Nc5">
                                                     <rect key="frame" x="5" y="0.0" width="304" height="396"/>
                                                 </imageView>
                                             </subviews>
@@ -3230,6 +3232,9 @@
                                             <constraint firstItem="gJe-C1-Nc5" firstAttribute="top" secondItem="w9S-mB-mPA" secondAttribute="top" id="JOC-Bd-dJN"/>
                                             <constraint firstAttribute="bottom" secondItem="gJe-C1-Nc5" secondAttribute="bottom" id="Tah-mw-SLe"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="image" destination="gJe-C1-Nc5" id="XdU-2u-qc3"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -3238,7 +3243,7 @@
                                 </connections>
                             </collectionView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wm-OF-rFJ" userLabel="prev">
-                                <rect key="frame" x="10" y="278.66666666666669" width="30" height="50"/>
+                                <rect key="frame" x="10" y="259.66666666666669" width="30" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Iy9-jU-AKh"/>
                                     <constraint firstAttribute="width" constant="30" id="gb7-Pw-cbw"/>
@@ -3249,21 +3254,21 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzH-bN-5qK" userLabel="next">
-                                <rect key="frame" x="373" y="278" width="30" height="50"/>
+                                <rect key="frame" x="373" y="259" width="30" height="50"/>
                                 <state key="normal" image="next"/>
                                 <connections>
                                     <action selector="nextCollectionView:" destination="pdh-Xz-0EO" eventType="touchUpInside" id="WJO-BE-aXJ"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxD-de-1w0" userLabel="separator">
-                                <rect key="frame" x="10.333333333333343" y="547" width="393.33333333333326" height="2"/>
+                                <rect key="frame" x="10.333333333333343" y="509.33333333333331" width="393.33333333333326" height="2"/>
                                 <color key="backgroundColor" red="0.43461224440000001" green="0.69730025529999995" blue="0.93392932419999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="53v-RS-vzm"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUG-Rw-M0r">
-                                <rect key="frame" x="30" y="579" width="354" height="27"/>
+                                <rect key="frame" x="30" y="541.33333333333337" width="354" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="Ai2-4q-4dE"/>
                                 </constraints>
@@ -3272,7 +3277,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Rarely used 100% original Dell mouse. Original box is also included." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4qR-ge-moz">
-                                <rect key="frame" x="30" y="611" width="354" height="55"/>
+                                <rect key="frame" x="30" y="573.33333333333337" width="354" height="92.666666666666629"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -3296,7 +3301,7 @@
                             <constraint firstItem="icp-Li-wpu" firstAttribute="top" secondItem="JsU-cL-mmT" secondAttribute="bottom" constant="5" id="1d5-uk-OTd"/>
                             <constraint firstItem="JzH-bN-5qK" firstAttribute="centerY" secondItem="4wm-OF-rFJ" secondAttribute="centerY" id="1ir-2f-Bh4"/>
                             <constraint firstItem="bbt-Ds-ksB" firstAttribute="leading" secondItem="ATL-Kl-eC7" secondAttribute="trailing" constant="10" id="2eu-Xj-4t5"/>
-                            <constraint firstItem="hxD-de-1w0" firstAttribute="centerY" secondItem="5LQ-BC-miV" secondAttribute="centerY" multiplier="1.45" id="3rE-FT-Upp"/>
+                            <constraint firstItem="hxD-de-1w0" firstAttribute="centerY" secondItem="5LQ-BC-miV" secondAttribute="centerY" multiplier="1.35" id="3rE-FT-Upp"/>
                             <constraint firstItem="hxD-de-1w0" firstAttribute="top" secondItem="icp-Li-wpu" secondAttribute="bottom" constant="5" id="Ap3-57-B3U"/>
                             <constraint firstItem="cUG-Rw-M0r" firstAttribute="leading" secondItem="5LQ-BC-miV" secondAttribute="leading" constant="30" id="ETB-Af-0py"/>
                             <constraint firstItem="5LQ-BC-miV" firstAttribute="bottom" secondItem="4qR-ge-moz" secondAttribute="bottom" constant="70" id="ILx-m1-G5y"/>
@@ -3326,6 +3331,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="icp-Li-wpu" id="NNP-q6-d4Z"/>
+                        <outlet property="descriptionTV" destination="4qR-ge-moz" id="QFs-IA-l2y"/>
                         <outlet property="nextButton" destination="JzH-bN-5qK" id="w3C-qH-j2u"/>
                         <outlet property="prevButton" destination="4wm-OF-rFJ" id="gAy-G5-BBT"/>
                         <outlet property="usernameLabel" destination="bbt-Ds-ksB" id="s01-5X-eTC"/>
@@ -3581,6 +3587,7 @@
         <image name="mouse" width="1000" height="815"/>
         <image name="next" width="33" height="59"/>
         <image name="pierre-chatel-innocenti-678000-unsplash" width="4654" height="5817"/>
+        <image name="placeholder" width="104" height="104"/>
         <image name="placeholder1" width="474" height="474"/>
         <image name="plus" width="42" height="42"/>
         <image name="prev" width="32" height="59"/>

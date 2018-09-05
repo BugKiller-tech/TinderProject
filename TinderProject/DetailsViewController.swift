@@ -9,14 +9,18 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
+    
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet var descriptionTV: UITextView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
     
-    var data = ["a", "b", "c", "d"]
+    var thing: Thing?
+    
+    var imageUrls: [String] = []
     var currentCell: Int = 0 {
         didSet {
 //            if currentCell >= data.count { currentCell = data.count - 1 }
@@ -37,6 +41,16 @@ class DetailsViewController: UIViewController {
     
     func initUIValues() {
         collectionView.flashScrollIndicators()
+        if let thing = self.thing {
+            self.usernameLabel.text = thing.owner?.name
+            self.descriptionTV.text = thing.description
+            
+            if let img1 = thing.imageUrl1 { if img1 != "" { imageUrls.append(img1) }}
+            if let img2 = thing.imageUrl2 { if img2 != "" { imageUrls.append(img2) }}
+            if let img3 = thing.imageUrl3 { if img3 != "" { imageUrls.append(img3) }}
+            if let img4 = thing.imageUrl4 { if img4 != "" { imageUrls.append(img4) }}
+            collectionView.reloadData()
+        }
         
     }
     
@@ -67,10 +81,11 @@ class DetailsViewController: UIViewController {
 extension DetailsViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return imageUrls.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! ThingDetailCollectionCell
+        cell.image.sd_setImage(with: URL(string: imageUrls[indexPath.item]))
         return cell
     }
     
